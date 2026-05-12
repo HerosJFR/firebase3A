@@ -10,23 +10,29 @@
         margin: 10px;
     }
 </style>
+<script>
+
+</script>
 
 <body>
     <main>
         <fieldset>
             <legend>Formulario de Cadastro</legend>
             <form action="POST">
-                cep: <input type="text" name="CEP"><br>
-                cpf: <input type="text" name="CPF"><br>
-                email: <input type="text" name="EMAIL"><br>
-                idade: <input type="text" name="IDADE"><br>
-                nome: <input type="text" name="NOME"><br>
-                senha: <input type="text" name="SENHA"><br>
-                telefone: <input type="text" name="TELEFONE"><br>
+                cep: <input type="text" name="CEP" placeholder="DIGITE O SEU CEP" minlength="10" maxlength="100"><br>
+                cpf: <input type="text" name="CPF" placeholder="DIGITE O SEU CPF" minlength="11" maxlength="11"><br>
+                email: <input type="text" name="EMAIL" placeholder="DIGITE O SEU EMAIL"  maxlength="100"><br>
+                idade: <input type="text" name="IDADE" placeholder="DIGITE O SEU IDADE" minlength="1" maxlength="3"><br>
+                nome: <input type="text" name="NOME" placeholder="DIGITE O SEU NOME"  maxlength="100"><br>
+                senha: <input type="text" name="SENHA" placeholder="DIGITE O SEU SENHA" minlength="8" maxlength="40"><br>
+                telefone: <input type="text" name="TELEFONE" placeholder="DIGITE O SEU TELEFONE" minlength="11" maxlength="11"><br>
             <input type="submit" value="CADASTRAR"><br>
             </form>
         </fieldset>
     </main>
+    
+</body>
+</html>
     
 </body>
 </html>
