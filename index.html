@@ -28,7 +28,23 @@
         border-color: white;
     }
 </style>
-<script>
+<body>
+    <main>
+        <fieldset>
+            <legend>Formulario de Cadastro</legend>
+            
+            cep: <input type="text" name="CEP" id="cep" placeholder="DIGITE O SEU CEP" minlength="10" maxlength="100"><br>
+            cpf: <input type="text" name="CPF" id="cpf" placeholder="DIGITE O SEU CPF" minlength="14" maxlength="11"><br>
+            email: <input type="text" name="EMAIL" id="email" placeholder="DIGITE O SEU EMAIL"  maxlength="100"><br>
+            idade: <input type="text" name="IDADE" id="idade" placeholder="DIGITE O SEU IDADE" minlength="1" maxlength="3"><br>
+            nome: <input type="text" name="NOME" id="nome" placeholder="DIGITE O SEU NOME"  maxlength="100"><br>
+            senha: <input type="password" name="SENHA" id="senha" placeholder="DIGITE O SEU SENHA" minlength="8" maxlength="40"><br>
+            telefone: <input type="text" name="TELEFONE" id="telefone" placeholder="DIGITE O SEU TELEFONE" minlength="11" maxlength="11"><br>
+            <input type="submit" value="CADASTRAR"><br>
+            
+        </fieldset>
+    </main>
+    <script>
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
         import {
         getFirestore,
@@ -84,23 +100,5 @@
         }
         });
 </script>
-
-<body>
-    <main>
-        <fieldset>
-            <legend>Formulario de Cadastro</legend>
-            
-            cep: <input type="text" name="CEP" id="cep" placeholder="DIGITE O SEU CEP" minlength="10" maxlength="100"><br>
-            cpf: <input type="text" name="CPF" id="cpf" placeholder="DIGITE O SEU CPF" minlength="14" maxlength="11"><br>
-            email: <input type="text" name="EMAIL" id="email" placeholder="DIGITE O SEU EMAIL"  maxlength="100"><br>
-            idade: <input type="text" name="IDADE" id="idade" placeholder="DIGITE O SEU IDADE" minlength="1" maxlength="3"><br>
-            nome: <input type="text" name="NOME" id="nome" placeholder="DIGITE O SEU NOME"  maxlength="100"><br>
-            senha: <input type="password" name="SENHA" id="senha" placeholder="DIGITE O SEU SENHA" minlength="8" maxlength="40"><br>
-            telefone: <input type="text" name="TELEFONE" id="telefone" placeholder="DIGITE O SEU TELEFONE" minlength="11" maxlength="11"><br>
-            <input type="submit" value="CADASTRAR"><br>
-            
-        </fieldset>
-    </main>
-    
 </body>
 </html>
