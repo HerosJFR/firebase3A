@@ -90,14 +90,13 @@
         <fieldset>
             <legend>Formulario de Cadastro</legend>
             <form id="formulario">
-            cep: <input type="text" name="CEP" id="cep" placeholder="DIGITE O SEU CEP" minlength="10" maxlength="100"><br>
-            cpf: <input type="text" name="CPF" id="cpf" placeholder="DIGITE O SEU CPF" minlength="14" maxlength="11"><br>
-            email: <input type="text" name="EMAIL" id="email" placeholder="DIGITE O SEU EMAIL"  maxlength="100"><br>
-            idade: <input type="text" name="IDADE" id="idade" placeholder="DIGITE O SEU IDADE" minlength="1" maxlength="3"><br>
-            nome: <input type="text" name="NOME" id="nome" placeholder="DIGITE O SEU NOME"  maxlength="100"><br>
-            senha: <input type="password" name="SENHA" id="senha" placeholder="DIGITE O SEU SENHA" minlength="8" maxlength="40"><br>
-            telefone: <input type="text" name="TELEFONE" id="telefone" placeholder="DIGITE O SEU TELEFONE" minlength="11" maxlength="11"><br>
-            <input type="submit" value="Cadastrar"><br>
+                <p>NOME:</p><input type="text" id="nome" class="campo" placeholder="Digite o seu nome" maxlength="100" minlength="5" required><br>
+                <p>IDADE</p><input type="text" id="idade" class="campo" placeholder="Digite sua idade" maxlength="2" minlength="1" required><br>
+                <p>EMAIL:</p><input type="text" id="email" class="campo" placeholder="Digite seu email" maxlength="50" minlength="10" required><br>
+                <p>CPF:</p><input type="text" id="cpf" class="campo" placeholder="Digite seu cpf" maxlength="11" minlength="11" required><br>
+                <p>SENHA:</p><input type="text" id="senha" class="campo" placeholder="Digite sua senha" maxlength="10" minlength="5" required><br>
+                <p>TELEFONE:</p><input type="text" id="telefone" class="campo" placeholder="Digite seu telefone" maxlength="11" minlength="11" required><br>
+                <p>CEP:</p><input type="text" id="cep" class="campo" placeholder="Digite seu cep" maxlength="12" minlength="10" required><br><br>
             </form>
         </fieldset>
     </main>
