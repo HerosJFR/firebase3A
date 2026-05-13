@@ -29,58 +29,60 @@
     }
 </style>
 <script>
- import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-    import {
-      getFirestore,
-      collection,
-      addDoc
-    } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+        import {
+        getFirestore,
+        collection,
+        addDoc
+        } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
-    const firebaseConfig = {
-        apiKey: "AIzaSyCfffba-K-xmsEc2F_nJb2fhgKNwljC0Jc",
-        authDomain: "herosjhessy-a4c53.firebaseapp.com",
-        projectId: "herosjhessy-a4c53",
-        storageBucket: "herosjhessy-a4c53.firebasestorage.app",
-        messagingSenderId: "824566132033",
-        appId: "1:824566132033:web:03951b3c1e2f86bbbf05c0"
-    };
+        const firebaseConfig = {
+            const firebaseConfig = {
+              apiKey: "AIzaSyCfffba-K-xmsEc2F_nJb2fhgKNwljC0Jc",
+              authDomain: "herosjhessy-a4c53.firebaseapp.com",
+              projectId: "herosjhessy-a4c53",
+              storageBucket: "herosjhessy-a4c53.firebasestorage.app",
+              messagingSenderId: "824566132033",
+              appId: "1:824566132033:web:03951b3c1e2f86bbbf05c0"
+            };
+        };
 
-    const app = initializeApp(firebaseConfig);
-    const db = getFirestore(app);
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
 
-    const form = document.getElementById("formUsuario");
-    const mensagem = document.getElementById("mensagem");
+        const form = document.getElementById("formulario");
+        const mensagem = document.getElementById("mensagem");
 
-    form.addEventListener("submit", async (e) => {
-      e.preventDefault();
+        form.addEventListener("submit", async (e) => {
+        e.preventDefault();
 
-      const cpf = document.getElementById("cpf").value;
-      const nome = document.getElementById("nome").value;
-      const email = document.getElementById("email").value;
-      const telefone = document.getElementById("telefone").value;
-      const senha = document.getElementById("senha").value;
-      const cep = document.getElementById("cep").value;
-      const idade = document.getElementById("idade").value;
+        const cpf = document.getElementById("cpf").value;
+        const nome = document.getElementById("nome").value;
+        const email = document.getElementById("email").value;
+        const telefone = document.getElementById("telefone").value;
+        const senha = document.getElementById("senha").value;
+        const cep = document.getElementById("cep").value;
+        const idade = document.getElementById("idade").value;
 
-      try {
-        await addDoc(collection(db, "usuarios"), {
-          cpf,
-          nome,
-          email,
-          telefone,
-          senha,
-          cep,
-          idade
+        try {
+            await addDoc(collection(db, "usuarios"), {
+            cpf,
+            nome,
+            email,
+            telefone,
+            senha,
+            cep,
+            idade
+            });
+
+            mensagem.textContent = "Usuário salvo com sucesso.";
+            mensagem.style.color = "green";
+            form.reset();
+        } catch (error) {
+            mensagem.textContent = "Erro ao salvar: " + error.message;
+            mensagem.style.color = "red";
+        }
         });
-
-        mensagem.textContent = "Usuário salvo com sucesso.";
-        mensagem.style.color = "green";
-        form.reset();
-      } catch (error) {
-        mensagem.textContent = "Erro ao salvar: " + error.message;
-        mensagem.style.color = "red";
-      }
-    });
 </script>
 
 <body>
@@ -89,7 +91,7 @@
             <legend>Formulario de Cadastro</legend>
             
             cep: <input type="text" name="CEP" id="cep" placeholder="DIGITE O SEU CEP" minlength="10" maxlength="100"><br>
-            cpf: <input type="text" name="CPF" id="cpf" placeholder="DIGITE O SEU CPF" minlength="11" maxlength="11"><br>
+            cpf: <input type="text" name="CPF" id="cpf" placeholder="DIGITE O SEU CPF" minlength="14" maxlength="11"><br>
             email: <input type="text" name="EMAIL" id="email" placeholder="DIGITE O SEU EMAIL"  maxlength="100"><br>
             idade: <input type="text" name="IDADE" id="idade" placeholder="DIGITE O SEU IDADE" minlength="1" maxlength="3"><br>
             nome: <input type="text" name="NOME" id="nome" placeholder="DIGITE O SEU NOME"  maxlength="100"><br>
