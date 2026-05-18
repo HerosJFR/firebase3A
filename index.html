@@ -27,7 +27,7 @@
         border-color: white;
     }
 </style>
-        <script>
+        <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
         import {
         getFirestore,
@@ -35,16 +35,14 @@
         addDoc
         } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
-        const firebaseConfig = {
-            const firebaseConfig = {
-              apiKey: "AIzaSyCfffba-K-xmsEc2F_nJb2fhgKNwljC0Jc",
-              authDomain: "herosjhessy-a4c53.firebaseapp.com",
-              projectId: "herosjhessy-a4c53",
-              storageBucket: "herosjhessy-a4c53.firebasestorage.app",
-              messagingSenderId: "824566132033",
-              appId: "1:824566132033:web:03951b3c1e2f86bbbf05c0"
-            };
-        };
+const firebaseConfig = {
+  apiKey: "AIzaSyCfffba-K-xmsEc2F_nJb2fhgKNwljC0Jc",
+  authDomain: "herosjhessy-a4c53.firebaseapp.com",
+  projectId: "herosjhessy-a4c53",
+  storageBucket: "herosjhessy-a4c53.firebasestorage.app",
+  messagingSenderId: "824566132033",
+  appId: "1:824566132033:web:03951b3c1e2f86bbbf05c0"
+};
 
         const app = initializeApp(firebaseConfig);
         const db = getFirestore(app);
@@ -82,14 +80,12 @@
             mensagem.style.color = "red";
         }
         });
-</script>
-</head>
-
-<body>
-    <main>
-        <fieldset>
-            <legend>Formulario de Cadastro</legend>
-            <form id="formulario">
+    </script>
+    </head>
+    <body>
+        <form id="formulario">
+            <fieldset>
+                <legend>Cadastro do Firebase</legend>
                 <p>NOME:</p><input type="text" id="nome" class="campo" placeholder="Digite o seu nome" maxlength="100" minlength="5" required><br>
                 <p>IDADE</p><input type="text" id="idade" class="campo" placeholder="Digite sua idade" maxlength="2" minlength="1" required><br>
                 <p>EMAIL:</p><input type="text" id="email" class="campo" placeholder="Digite seu email" maxlength="50" minlength="10" required><br>
@@ -97,9 +93,8 @@
                 <p>SENHA:</p><input type="text" id="senha" class="campo" placeholder="Digite sua senha" maxlength="10" minlength="5" required><br>
                 <p>TELEFONE:</p><input type="text" id="telefone" class="campo" placeholder="Digite seu telefone" maxlength="11" minlength="11" required><br>
                 <p>CEP:</p><input type="text" id="cep" class="campo" placeholder="Digite seu cep" maxlength="12" minlength="10" required><br><br>
-            </form>
-        </fieldset>
-    </main>
-
-</body>
-</html>
+                <input type="submit" value="Cadastrar">
+            </fieldset>
+        </form>
+    </body>
+<html>
