@@ -50,7 +50,7 @@
         }
     </style>
     <script>
-            import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
     import {
       getFirestore,
       collection,
@@ -75,34 +75,38 @@
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
 
-      const cep = document.getElementById("cep").value;
-      const endereco = document.getElementById("endereco").value;
-      const complemento1 = document.getElementById("complemento1").value;
-      const cidade = document.getElementById("cidade").value;
-      const telefone1 = document.getElementById("telefone1").value;
-      const telefone2 = document.getElementById("telefone2").value;
-      const celular = document.getElementById("celular").value;
-      const fax = document.getElementById("fax").value;
-      const bairro = document.getElementById("bairro").value;
-      const complemento2 = document.getElementById("complemento2").value;
-      const complemento3 = document.getElementById("complemento3").value;
-      const complemento4 = document.getElementById("complemento4").value;
-      const complemento5 = document.getElementById("complemento5").value;
+        const bairro = document.getElementById("bairro").value;
+        const celular = document.getElementById("celular").value;
+        const cep = document.getElementById("cep").value;
+        const cidade = document.getElementById("cidade").value;
+        const complemento1 = document.getElementById("complemento1").value;
+        const complemento2 = document.getElementById("complemento2").value;
+        const complemento3 = document.getElementById("complemento3").value;
+        const complemento4 = document.getElementById("complemento4").value;
+        const complemento5 = document.getElementById("complemento5").value;
+        const endereco = document.getElementById("endereco").value;
+        const fax = document.getElementById("fax").value;
+        const telefone1 = document.getElementById("telefone1").value;
+        const telefone2 = document.getElementById("telefone2").value;
+
 
       try {
         await addDoc(collection(db, "cad_endereco"), {
-          cep,
-          endereco,
-          complemento1,
-          cidade,
-          telefone1,
-          telefone2,
-          celular,
-          fax,
-          complemento2,
-          complemento3,
-          complemento4,
-          complemento5
+            bairro,
+            celular,
+            cep,
+            cidade,
+            complemento1,
+            complemento2,
+            complemento3,
+            complemento4,
+            complemento5,
+            endereco,
+            fax,      
+            telefone1,
+            telefone2
+            
+
         });
 
         mensagem.textContent = "Endereço salvo com sucesso.";
