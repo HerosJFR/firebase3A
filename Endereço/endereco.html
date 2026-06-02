@@ -58,12 +58,12 @@
     } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
     const firebaseConfig = {
-  apiKey: "AIzaSyCfffba-K-xmsEc2F_nJb2fhgKNwljC0Jc",
-  authDomain: "herosjhessy-a4c53.firebaseapp.com",
-  projectId: "herosjhessy-a4c53",
-  storageBucket: "herosjhessy-a4c53.firebasestorage.app",
-  messagingSenderId: "824566132033",
-  appId: "1:824566132033:web:03951b3c1e2f86bbbf05c0"
+        apiKey: "AIzaSyCfffba-K-xmsEc2F_nJb2fhgKNwljC0Jc",
+        authDomain: "herosjhessy-a4c53.firebaseapp.com",
+        projectId: "herosjhessy-a4c53",
+        storageBucket: "herosjhessy-a4c53.firebasestorage.app",
+        messagingSenderId: "824566132033",
+        appId: "1:824566132033:web:03951b3c1e2f86bbbf05c0"
     };
 
     const app = initializeApp(firebaseConfig);
@@ -84,10 +84,10 @@
       const celular = document.getElementById("celular").value;
       const fax = document.getElementById("fax").value;
       const bairro = document.getElementById("bairro").value;
-      const complemento2 = document.getElementById("complemento").value;
-      const complemento3 = document.getElementById("complemento").value;
-      const complemento4 = document.getElementById("complemento").value;
-      const complemento5 = document.getElementById("complemento").value;
+      const complemento2 = document.getElementById("complemento2").value;
+      const complemento3 = document.getElementById("complemento3").value;
+      const complemento4 = document.getElementById("complemento4").value;
+      const complemento5 = document.getElementById("complemento5").value;
 
       try {
         await addDoc(collection(db, "usuarios"), {
@@ -152,10 +152,10 @@
                             <div id="bloco_b2">
                                 Bairro: <input type="text" id="bairro" placeholder="Bairro" maxlength="150"><br>
                                 <button id="lupa">lupa</button><button id="borracha">apagar</button><br> 
-                                Complemento: <input type="text" id="complemento2" minlength="150"><br> 
-                                Complemento: <input type="text" id="complemento3" minlength="150"><br> 
-                                Complemento: <input type="text" id="complemento4" minlength="150"><br>
-                                Complemento: <input type="text" id="complemento5" minlength="150"><br>
+                                Complemento: <input type="text" id="complemento2" maxlength="150"><br> 
+                                Complemento: <input type="text" id="complemento3" maxlength="150"><br> 
+                                Complemento: <input type="text" id="complemento4" maxlength="150"><br>
+                                Complemento: <input type="text" id="complemento5" maxlength="150"><br>
                             </div>
                         </div>
                     </div>
